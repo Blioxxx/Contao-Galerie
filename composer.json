@@ -1,0 +1,31 @@
+{
+    "name": "blioxxx/contao-galerie",
+    "description": "Galerie für Contao Open Source CMS",
+    "keywords": [
+      "blioxxx",
+      "contao",
+      "galiere",
+      "gallery"
+    ],
+    "type":"contao-module",
+    "minimum-stability": "beta",
+    "license": "proprietary",
+    "authors": [
+      {
+          "name": "Mirco Kibiger",
+          "email": "mkibiger@blioxxx.de"
+      }
+    ],
+    "require": {
+      "php": ">=5.3",
+      "contao/core": ">=3.2.5,<4",
+      "contao-community-alliance/composer-plugin": "^2.4.0"
+    },
+    "extra": {
+      "contao": {
+          "sources": {
+              "": "system/modules/bx-galiere"
+          }
+      }
+    }
+}
