@@ -10,9 +10,9 @@
 
 
 /**
- * Table tl_bx_galerie
+ * Table tl_bx_gallery
  */
-$GLOBALS['TL_DCA']['tl_bx_galerie'] = array
+$GLOBALS['TL_DCA']['tl_bx_gallery'] = array
 (
 
     // Config
@@ -58,28 +58,28 @@ $GLOBALS['TL_DCA']['tl_bx_galerie'] = array
         (
             'edit' => array
             (
-                'label'                 => &$GLOBALS['TL_LANG']['tl_bx_galerie']['edit'],
-                'href'                  => 'table=tl_bx_galerie_events',
+                'label'                 => &$GLOBALS['TL_LANG']['tl_bx_gallery']['edit'],
+                'href'                  => 'table=tl_bx_gallery',
                 'icon'                  => 'edit.gif'
             ),
             'copy' => array
             (
-                'label'                 => &$GLOBALS['TL_LANG']['tl_bx_galerie']['copy'],
+                'label'                 => &$GLOBALS['TL_LANG']['tl_bx_gallery']['copy'],
                 'href'                  => 'act=copy',
                 'icon'                  => 'copy.gif',
-                'button_callback'       => array('tl_bx_galerie', 'copyCalendar')
+                //'button_callback'       => array('tl_bx_galerie', 'copyCalendar')
             ),
             'delete' => array
             (
-                'label'                 => &$GLOBALS['TL_LANG']['tl_bx_galerie']['delete'],
+                'label'                 => &$GLOBALS['TL_LANG']['tl_bx_gallery']['delete'],
                 'href'                  => 'act=delete',
                 'icon'                  => 'delete.gif',
                 'attributes'            => 'onclick="if(!confirm(\'' . $GLOBALS['TL_LANG']['MSC']['deleteConfirm'] . '\'))return false;Backend.getScrollOffset()"',
-                'button_callback'       => array('tl_bx_galerie', 'deleteCalendar')
+                //'button_callback'       => array('tl_bx_galerie', 'deleteCalendar')
             ),
             'show' => array
             (
-                'label'                 => &$GLOBALS['TL_LANG']['tl_bx_galerie']['show'],
+                'label'                 => &$GLOBALS['TL_LANG']['tl_bx_gallery']['show'],
                 'href'                  => 'act=show',
                 'icon'                  => 'show.gif'
             )
@@ -105,7 +105,7 @@ $GLOBALS['TL_DCA']['tl_bx_galerie'] = array
         ),
         'title' => array
         (
-            'label'                     => &$GLOBALS['TL_LANG']['tl_bx_galerie']['title'],
+            'label'                     => &$GLOBALS['TL_LANG']['tl_bx_gallery']['title'],
             'exclude'                   => true,
             'search'                    => true,
             'inputType'                 => 'text',
@@ -113,7 +113,7 @@ $GLOBALS['TL_DCA']['tl_bx_galerie'] = array
             'sql'                       => "varchar(255) NOT NULL default ''"
         ),
         'picture' => array(
-            'label'                     => &$GLOBALS['TL_LANG']['tl_bx_galerie']['picture'],
+            'label'                     => &$GLOBALS['TL_LANG']['tl_bx_gallery']['picture'],
             'inputType'               => 'fileTree',
             'exclude'                 => true,
             'eval'                    => array('filesOnly'=>true, 'fieldType'=>'radio','mandatory'=>false, 'tl_class'=>'clr'),
@@ -130,7 +130,7 @@ $GLOBALS['TL_DCA']['tl_bx_galerie'] = array
     )
 );
 
-class tl_bx_galerie extends \Contao\System
+class tl_bx_gallery extends \Contao\System
 {
     public function __construct()
     {
