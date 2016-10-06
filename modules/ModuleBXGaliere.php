@@ -2,7 +2,10 @@
 
 namespace BX\Gallery;
 
-class ModuleBXGalerie extends \Contao\Module
+use Blioxxx\Gallery\database;
+use \Contao\Module;
+
+class ModuleBXGalerie extends Module
 {
 
     /**
@@ -24,7 +27,7 @@ class ModuleBXGalerie extends \Contao\Module
             /** @var \BackendTemplate|object $objTemplate */
             $objTemplate = new \BackendTemplate('be_wildcard');
 
-            $objTemplate->wildcard = '### ' . utf8_strtoupper($GLOBALS['TL_LANG']['FMD']['calendar'][0]) . ' ###';
+            $objTemplate->wildcard = '### ' . utf8_strtoupper($GLOBALS['TL_LANG']['FMD']['bx-galerie'][0]) . ' ###';
             $objTemplate->title = $this->headline;
             $objTemplate->id = $this->id;
             $objTemplate->link = $this->name;
@@ -42,6 +45,7 @@ class ModuleBXGalerie extends \Contao\Module
      */
     protected function compile()
     {
-        
+        $database = new database();
+        $arrGallery = $database->getAllGalleryItems();
     }
 }

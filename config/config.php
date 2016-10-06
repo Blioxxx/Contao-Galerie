@@ -7,7 +7,7 @@ array_insert($GLOBALS['BE_MOD']['Blioxxx'], 1, array
 (
     'bx-galerie' => array
     (
-        'tables'      => array('tl_bx_galerie'),
+        'tables'      => array('tl_bx_gallery'),
         'icon'        => 'system/modules/bx-galiere/assets/icon.png'
     )
 ));
