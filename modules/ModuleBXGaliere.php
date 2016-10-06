@@ -47,5 +47,7 @@ class ModuleBXGalerie extends Module
     {
         $database = new database();
         $arrGallery = $database->getAllGalleryItems();
+
+        $this->Template->gallery = $arrGallery;
     }
 }
