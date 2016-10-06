@@ -59,7 +59,7 @@ $GLOBALS['TL_DCA']['tl_bx_gallery'] = array
             'edit' => array
             (
                 'label'                 => &$GLOBALS['TL_LANG']['tl_bx_gallery']['edit'],
-                'href'                  => 'table=tl_bx_gallery',
+                'href'                  => 'act=edit',
                 'icon'                  => 'edit.gif'
             ),
             'copy' => array
@@ -120,11 +120,11 @@ $GLOBALS['TL_DCA']['tl_bx_gallery'] = array
             'sql'                       => "binary(16) NULL",
             'load_callback' => array
             (
-                array('tl_cw_portfolio', 'setSingleSrcFlags')
+                array('tl_bx_gallery', 'setSingleSrcFlags')
             ),
             'save_callback' => array
             (
-                array('tl_cw_portfolio', 'storeFileMetaInformation')
+                array('tl_bx_gallery', 'storeFileMetaInformation')
             )
         )
     )
