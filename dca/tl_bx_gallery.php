@@ -89,7 +89,7 @@ $GLOBALS['TL_DCA']['tl_bx_gallery'] = array
     // Palettes
     'palettes' => array
     (
-        'default'                       => '{title_legend},title;'
+        'default'                       => '{title_legend},title,picture;'
     ),
 
     // Fields
@@ -114,10 +114,10 @@ $GLOBALS['TL_DCA']['tl_bx_gallery'] = array
         ),
         'picture' => array(
             'label'                     => &$GLOBALS['TL_LANG']['tl_bx_gallery']['picture'],
-            'inputType'               => 'fileTree',
-            'exclude'                 => true,
-            'eval'                    => array('filesOnly'=>true, 'fieldType'=>'radio','mandatory'=>false, 'tl_class'=>'clr'),
-            'sql'                     => "binary(16) NULL",
+            'inputType'                 => 'fileTree',
+            'exclude'                   => true,
+            'eval'                      => array('filesOnly'=>true, 'fieldType'=>'radio','mandatory'=>false, 'tl_class'=>'clr'),
+            'sql'                       => "binary(16) NULL",
             'load_callback' => array
             (
                 array('tl_cw_portfolio', 'setSingleSrcFlags')
