@@ -1,1 +1,13 @@
-<?php
+<?php if ($this->headline): ?>
+    <<?php echo $this->hl; ?>><?php echo $this->headline; ?></<?php echo $this->hl; ?>>
+<?php endif; ?>
+
+<div class="feature-overview">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="row">
+            
+            </div>
+        </div>
+    </div>
+</div>

@@ -35,6 +35,14 @@ class ModuleBXGalerie extends Module
 
             return $objTemplate->parse();
         }
+
+        if (TL_MODE == "FE")
+        {
+            //$GLOBALS['TL_CSS'][] = 'system/modules/cw_portfolio/assets/css/framework.css|screen';
+            // $GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/cw_portfolio/assets/js/isotope.js';
+
+            $GLOBALS['TL_CSS'][] = 'composer/vendor/twitter/bootstrap/dist/css/bootstrap.min.css|screen';
+        }
         
         return parent::generate();
     }
