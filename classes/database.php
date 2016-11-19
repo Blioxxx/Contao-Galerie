@@ -28,7 +28,7 @@ class database extends System
      */
     public function getPictureFromDB($strObjID)
     {
-        $query = "SELECT picture FROM tl_bx_gallery WHERE id=?";
+        $query = "SELECT id, title, picture FROM tl_bx_gallery WHERE id=?";
         $objPicture = $this->Database->prepare($query)->execute($strObjID);
         $objFile = \FilesModel::findByUuid($objPicture->picture);
         return $objFile->path;
