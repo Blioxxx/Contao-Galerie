@@ -59,7 +59,7 @@ class ModuleBXGalerie extends Module
         while($objGallery->next())
         {
             $arrGallery[] = array(
-                'title'      => $objGallery->title,
+                'title'     => $objGallery->title,
                 'picture'   => $database->getPictureFromDB($objGallery->id),
             );
         }
