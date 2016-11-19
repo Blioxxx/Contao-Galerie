@@ -7,7 +7,7 @@
             <?php foreach ($this->gallery as $item){ ?>
                 <div class="col-sm-4">
                     <img src="<?= $item['picture'];?>">
-                    <span><?= $item['title']; ?></span>
+                    <span style="font-size: 16px;" class="text-center"><?= $item['title']; ?></span>
                 </div>
             <?php } ?>
     </div>
