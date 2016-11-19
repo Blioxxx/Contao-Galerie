@@ -18,7 +18,7 @@ ClassLoader::addClasses(array
     'BX\Gallery\database'        => 'system/modules/bx-galiere/classes/database.php',
 
     // Modules
-    'BX\Gallery\ModuleBXGalerie' => 'system/modules/bx-galiere/modules/ModuleBXGalerie.php',
+    'ModuleBXGalerie' => 'system/modules/bx-galiere/modules/ModuleBXGalerie.php',
 ));
 
 

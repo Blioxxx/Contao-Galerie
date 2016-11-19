@@ -1,7 +1,5 @@
 <?php
 
-namespace BX\Gallery;
-
 use Blioxxx\Gallery\database;
 use \Contao\Module;
 
