@@ -6,7 +6,9 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="row">
-            
+            <?php foreach ($this->gallery as $item){ ?>
+                <img src="<?= $item['picture'];?>">
+            <?php } ?>
             </div>
         </div>
     </div>
