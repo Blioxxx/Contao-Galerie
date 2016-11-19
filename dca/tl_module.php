@@ -12,6 +12,6 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['bx-galiere-title'] = array
         'Nicht anzeigen'
     ),
     'default'                 => 'Nicht anzeigen',
-    'eval'                    => array('mandatory'=>true, 'multiple'=>false, 'tl_class'=>'w50'),
+    'eval'                    => array('mandatory'=>false, 'multiple'=>false, 'tl_class'=>'w50'),
     'sql'                     => "varchar(128) NOT NULL default ''",
 );
