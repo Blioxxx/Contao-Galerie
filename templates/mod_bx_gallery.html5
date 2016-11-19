@@ -4,14 +4,10 @@
 
 <div class="feature-overview">
     <div class="row">
-        <div class="col-sm-12">
-            <div class="row">
             <?php foreach ($this->gallery as $item){ ?>
-                <div class="col-md-3">
+                <div class="col-sm-4">
                     <img src="<?= $item['picture'];?>">
                 </div>
             <?php } ?>
-            </div>
-        </div>
     </div>
 </div>
