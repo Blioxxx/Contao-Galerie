@@ -8,6 +8,5 @@
     span.pictureTitle::before
     {
         content: "\A";
-        white-space: pre;
     }
 }
