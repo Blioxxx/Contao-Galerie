@@ -15,10 +15,10 @@
 ClassLoader::addClasses(array
 (
     // Classes
-    'BX\Gallery\database'        => 'system/modules/bx-galiere/classes/database.php',
+    'Blioxxx\Gallery\database'        => 'system/modules/bx-galiere/classes/database.php',
 
     // Modules
-    'BX\Gallery\ModuleBXGalerie' => 'system/modules/bx-galiere/modules/ModuleBXGalerie.php',
+    'ModuleBXGalerie' => 'system/modules/bx-galiere/modules/ModuleBXGalerie.php',
 ));
 
 

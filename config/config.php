@@ -20,6 +20,6 @@ array_insert($GLOBALS['FE_MOD'], 2, array
 (
     'Blioxxx' => array
     (
-        'galiere'    => 'ModuleBXGaliere'
+        'galiere'    => 'ModuleBXGalerie'
     )
 ));

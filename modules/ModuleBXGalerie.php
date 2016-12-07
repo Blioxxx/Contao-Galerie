@@ -1,7 +1,5 @@
 <?php
 
-namespace BX\Gallery;
-
 use Blioxxx\Gallery\database;
 use \Contao\Module;
 
@@ -39,7 +37,7 @@ class ModuleBXGalerie extends Module
         if (TL_MODE == "FE")
         {
             //$GLOBALS['TL_CSS'][] = 'system/modules/cw_portfolio/assets/css/framework.css|screen';
-            // $GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/cw_portfolio/assets/js/isotope.js';
+            //$GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/cw_portfolio/assets/js/isotope.js';
 
             $GLOBALS['TL_CSS'][] = 'composer/vendor/twitter/bootstrap/dist/css/bootstrap.min.css|screen';
         }
@@ -54,6 +52,18 @@ class ModuleBXGalerie extends Module
     protected function compile()
     {
         $database = new database();
-        $arrGallery = $database->getAllGalleryItems();
+        $objGallery = $database->getAllGalleryItems();
+
+        $arrGallery = array();
+        
+        while($objGallery->next())
+        {
+            $arrGallery[] = array(
+                'title'     => $objGallery->title,
+                'picture'   => $database->getPictureFromDB($objGallery->id),
+            );
+        }
+
+        $this->Template->gallery = $arrGallery;
     }
 }
