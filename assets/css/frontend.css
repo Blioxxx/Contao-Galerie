@@ -1,0 +1,13 @@
+@media screen and (min-width: 780px){
+    span.pictureTitle
+    {
+        margin-left:33%;
+        font-size: 16px;
+    }
+
+    span.pictureTitle::before
+    {
+        content: "\A";
+        white-space: pre;
+    }
+}
