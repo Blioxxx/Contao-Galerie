@@ -1,7 +1,7 @@
 <?php
 
 $GLOBALS['TL_LANG']['tl_bx_gallery']['title']           = array('Name', 'Name of the backend entry');
-$GLOBALS['TL_LANG']['tl_bx_gallery']['picture']         = array('Picture File', 'Bitte wählen Sie eine Bilddatei aus.');
+$GLOBALS['TL_LANG']['tl_bx_gallery']['picture']         = array('Picture File', 'Please select a Picture File.');
 
 // Legends
 $GLOBALS['TL_LANG']['tl_bx_gallery']['title_legend']    = "General Settings";
