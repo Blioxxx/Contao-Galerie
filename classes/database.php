@@ -18,7 +18,7 @@ class database extends System
      */
     public function getAllGalleryItems()
     {
-        $gallery = $this->Database->prepare('SELECT * FROM tl_bx_gallery')->execute();
+        $gallery = $this->Database->prepare('SELECT * FROM tl_bx_gallery ORDER BY sorting ASC')->execute();
         return $gallery;
     }
 
