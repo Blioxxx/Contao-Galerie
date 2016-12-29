@@ -34,10 +34,11 @@ $GLOBALS['TL_DCA']['tl_bx_gallery'] = array
     (
         'sorting' => array
         (
-            'mode'                      => 1,
-            'fields'                    => array('title'),
-            'flag'                      => 1,
-            'panelLayout'               => 'filter;search,limit'
+            'mode'                    => 4,
+            'fields'                  => array('sorting'),
+            'headerFields'            => array('name'),
+            'panelLayout'             => 'search,limit',
+            'child_record_callback'   => array('tl_bx_gallery', 'generateRowString')
         ),
         'label' => array
         (
@@ -102,6 +103,10 @@ $GLOBALS['TL_DCA']['tl_bx_gallery'] = array
         'tstamp' => array
         (
             'sql'                       => "int(10) unsigned NOT NULL default '0'"
+        ),
+        'sorting' => array
+        (
+            'sql'                     => "int(10) unsigned NOT NULL default '0'"
         ),
         'title' => array
         (
@@ -213,5 +218,17 @@ class tl_bx_gallery extends \Contao\System
 
         return $varValue;
     }
+
+    /* @begin backendsorting */
+    /**
+     * Generate a song row and return it as HTML string
+     * @param array
+     * @return string
+     */
+    public function generateRowString($arrRow)
+    {
+        return '<div>' . $arrRow['name'] . '</div>';
+    }
+    /* @end backendsorting */
 
 }
