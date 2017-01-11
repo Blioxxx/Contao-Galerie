@@ -111,6 +111,7 @@ $GLOBALS['TL_DCA']['tl_bx_gallery'] = array
             'label'                     => &$GLOBALS['TL_LANG']['tl_bx_gallery']['title'],
             'exclude'                   => true,
             'search'                    => true,
+            'sorting'                   => true,
             'inputType'                 => 'text',
             'eval'                      => array('mandatory'=>true, 'maxlength'=>255),
             'sql'                       => "varchar(255) NOT NULL default ''"
