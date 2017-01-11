@@ -36,7 +36,7 @@ $GLOBALS['TL_DCA']['tl_bx_gallery'] = array
         (
             'mode'                    => 4,
             'fields'                  => array('sorting'),
-            'headerFields'            => array('name'),
+            'headerFields'            => array('title'),
             'panelLayout'             => 'search,limit',
             'child_record_callback'   => array('tl_bx_gallery', 'generateRowString')
         ),
@@ -68,7 +68,6 @@ $GLOBALS['TL_DCA']['tl_bx_gallery'] = array
                 'label'                 => &$GLOBALS['TL_LANG']['tl_bx_gallery']['copy'],
                 'href'                  => 'act=copy',
                 'icon'                  => 'copy.gif',
-                //'button_callback'       => array('tl_bx_galerie', 'copyCalendar')
             ),
             'delete' => array
             (
@@ -76,7 +75,6 @@ $GLOBALS['TL_DCA']['tl_bx_gallery'] = array
                 'href'                  => 'act=delete',
                 'icon'                  => 'delete.gif',
                 'attributes'            => 'onclick="if(!confirm(\'' . $GLOBALS['TL_LANG']['MSC']['deleteConfirm'] . '\'))return false;Backend.getScrollOffset()"',
-                //'button_callback'       => array('tl_bx_galerie', 'deleteCalendar')
             ),
             'show' => array
             (
@@ -227,7 +225,7 @@ class tl_bx_gallery extends \Contao\System
      */
     public function generateRowString($arrRow)
     {
-        return '<div>' . $arrRow['name'] . '</div>';
+        return '<div>' . $arrRow['title'] . '</div>';
     }
     /* @end backendsorting */
 
