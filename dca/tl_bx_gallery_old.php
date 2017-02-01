@@ -12,7 +12,7 @@
 /**
  * Table tl_bx_gallery
  */
-$GLOBALS['TL_DCA']['tl_bx_gallery'] = array
+$GLOBALS['TL_DCA']['tl_bx_gallery_old'] = array
 (
 
     // Config
@@ -134,7 +134,7 @@ $GLOBALS['TL_DCA']['tl_bx_gallery'] = array
     )
 );
 
-class tl_bx_gallery extends \Contao\System
+class tl_bx_gallery_old extends \Contao\System
 {
     public function __construct()
     {
