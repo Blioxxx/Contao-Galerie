@@ -30,10 +30,11 @@ $GLOBALS['TL_DCA']['tl_bx_gallery'] = array
     (
         'sorting' => array
         (
-            'mode'                      => 1,
-            'fields'                    => array('title'),
-            'flag'                      => 1,
-            'panelLayout'               => 'filter;search,limit'
+            'mode'                    => 4,
+            'fields'                  => array('sorting'),
+            'headerFields'            => array('title'),
+            'panelLayout'             => 'search,limit',
+            'child_record_callback'   => array('tl_bx_gallery', 'generateRowString')
         ),
         'label' => array
         (
@@ -97,6 +98,10 @@ $GLOBALS['TL_DCA']['tl_bx_gallery'] = array
         (
             'sql'                       => "int(10) unsigned NOT NULL default '0'"
         ),
+        'sorting' => array
+        (
+            'sql'                       => "int(10) unsigned NOT NULL default '0'"
+        ),
         'title' => array
         (
             'label'                     => &$GLOBALS['TL_LANG']['tl_bx_gallery']['title'],
@@ -129,6 +134,7 @@ class tl_bx_gallery extends \Contao\System
     public function __construct()
     {
         $this->import('Database');
+        parent::__construct();
     }
 
     /**

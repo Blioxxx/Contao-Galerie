@@ -32,6 +32,15 @@ $GLOBALS['TL_DCA']['tl_bx_gallery_old'] = array
     // List
     'list' => array
     (
+        /*
+        'sorting' => array
+        (
+            'mode'                      => 1,
+            'fields'                    => array('title'),
+            'flag'                      => 1,
+            'panelLayout'               => 'filter;search,limit'
+        ),
+         */
         'sorting' => array
         (
             'mode'                    => 4,
