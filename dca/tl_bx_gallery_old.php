@@ -7,11 +7,14 @@
  *
  * @license LGPL-3.0+
  */
+
+
 /**
  * Table tl_bx_gallery
  */
-$GLOBALS['TL_DCA']['tl_bx_gallery'] = array
+$GLOBALS['TL_DCA']['tl_bx_gallery_old'] = array
 (
+
     // Config
     'config' => array
     (
@@ -25,9 +28,19 @@ $GLOBALS['TL_DCA']['tl_bx_gallery'] = array
             )
         )
     ),
+
     // List
     'list' => array
     (
+        /*
+        'sorting' => array
+        (
+            'mode'                      => 1,
+            'fields'                    => array('title'),
+            'flag'                      => 1,
+            'panelLayout'               => 'filter;search,limit'
+        ),
+         */
         'sorting' => array
         (
             'mode'                    => 4,
@@ -100,13 +113,14 @@ $GLOBALS['TL_DCA']['tl_bx_gallery'] = array
         ),
         'sorting' => array
         (
-            'sql'                       => "int(10) unsigned NOT NULL default '0'"
+            'sql'                     => "int(10) unsigned NOT NULL default '0'"
         ),
         'title' => array
         (
             'label'                     => &$GLOBALS['TL_LANG']['tl_bx_gallery']['title'],
             'exclude'                   => true,
             'search'                    => true,
+            'sorting'                   => true,
             'inputType'                 => 'text',
             'eval'                      => array('mandatory'=>true, 'maxlength'=>255),
             'sql'                       => "varchar(255) NOT NULL default ''"
@@ -129,7 +143,7 @@ $GLOBALS['TL_DCA']['tl_bx_gallery'] = array
     )
 );
 
-class tl_bx_gallery extends \Contao\System
+class tl_bx_gallery_old extends \Contao\System
 {
     public function __construct()
     {
