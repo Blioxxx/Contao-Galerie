@@ -41,6 +41,7 @@ class ModuleBXGalerie extends Module
 
             $GLOBALS['TL_CSS'][] = 'composer/vendor/twitter/bootstrap/dist/css/bootstrap.min.css|screen';
             $GLOBALS['TL_CSS'][] = 'system/modules/bx-galiere/assets/css/frontend.css|screen';
+            $GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/bx-galiere/assets/js/script.js|static';
         }
         
         return parent::generate();

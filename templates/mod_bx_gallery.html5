@@ -5,10 +5,14 @@
 <div class="feature-overview">
     <div class="row">
             <?php foreach ($this->gallery as $item){ ?>
-                <div class="col-sm-4">
+                <div class="col-sm-4 image">
                     <img src="<?= $item['picture'];?>">
                     <span class="text-center pictureTitle"><?= $item['title']; ?></span>
                 </div>
             <?php } ?>
     </div>
 </div>
+
+<script>
+    setMinHeight();
+</script>
